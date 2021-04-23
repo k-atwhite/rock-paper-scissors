@@ -1,0 +1,25 @@
+html {
+  background: url(assets/battlefield-background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  text-align: center
+}
+
+body {
+  font-family: 'PT Serif', serif;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* HIDE RADIO BUTTON */
+.radio-button {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
