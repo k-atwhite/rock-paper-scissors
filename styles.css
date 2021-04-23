@@ -1,6 +1,7 @@
 html {
   background: url(assets/battlefield-background.jpg) no-repeat center center fixed;
   background-size: cover;
+  font-family: 'PT Serif', serif;
 }
 
 /* * {
@@ -22,8 +23,11 @@ main {
 }
 
 body {
-  font-family: 'PT Serif', serif;
   margin: 0;
+}
+
+h1 {
+  display: flex;
 }
 
 .human-player {
@@ -59,12 +63,27 @@ body {
   width: 20vw;
 }
 
-.classic-game {
+/* add elemental-game and classic-game */
+.game-choice,
+.classic-game,
+.elemental-game {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   width: 60vw;
+}
+
+button {
+  border-radius: 15px;
+  background-color: #F4EDDC;
+  font-family: 'PT Serif', serif;
+  font-size: 150%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 5%;
 }
 
 .radio-buttons {
@@ -77,10 +96,14 @@ body {
   width: 20vw;
 }
 
-/* HIDE RADIO BUTTON */
-.radio-button {
+/* HIDE RADIO BUTTON - BUT JUST FOR WEAPONS */
+/* .radio-button {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
+} */
+
+.hidden {
+  display: none;
 }
