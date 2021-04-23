@@ -1,0 +1,109 @@
+html {
+  background: url(assets/battlefield-background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'PT Serif', serif;
+}
+
+/* * {
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+} */
+
+header {
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+}
+
+.human-player {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 20vw;
+}
+
+.player-avatar {
+  margin-bottom: 5%;
+}
+
+.human-player-info,
+.computer-player-info {
+  background-image: url(/Users/kwhite/turing/mod1/projects/rock-paper-scissors/assets/wood-sign.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  width: 20vw;
+}
+
+.computer-player {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 20vw;
+}
+
+/* add elemental-game and classic-game */
+.game-choice,
+.classic-game,
+.elemental-game {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 60vw;
+}
+
+button {
+  border-radius: 15px;
+  background-color: #F4EDDC;
+  font-family: 'PT Serif', serif;
+  font-size: 150%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 5%;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.weapon-img {
+  height: 25vh;
+  width: 20vw;
+}
+
+/* HIDE RADIO BUTTON - BUT JUST FOR WEAPONS */
+/* .radio-button {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+.hidden {
+  display: none;
+}

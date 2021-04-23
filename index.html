@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <aside class="human-player">
+        <section class="human-player-info">
+          <img class="player-avatar" src=assets/human-avatar.png alt="human-avatar">
+          <h3>HUMAN</h3>
+          <h4>Wins: 0</h4>
+        </section>
+      </aside>
+      <section class="game-choice">
+        <h1>Rock - Paper - Scissors</h1>
+        <h2>...choose your game...</h2>
+          <button class="classic-game-button" type="button">Classic Game:<br>Rock beats Scissors<br>Scissors beats Paper<br>Paper beats Rock</button>
+          <button class="elemental-game-button" type="button">Elemental Game:<br> Rock beats Fire<br>Fire beats Air<br>Air beats Water<br>Water beats Rock<br>All else = DRAW!</button>
+      </section>
+      <div class="classic-game hidden">
+        <header>
+          <h1>Rock - Paper - Scissors</h1>
+          <h2>...choose your weapon...</h2>
+        </header>
+        <label>
+          <input type="radio" class="radio-button hidden" id="rock" name="weapon" value="">
+          <img class="weapon-img" src=assets/rock-weapon.png alt="rock-weapon">
+        </label>
+        <label>
+          <input type="radio" class="radio-button hidden" id="paper" name="weapon" value="">
+          <img class="weapon-img" src=assets/paper-weapon.png alt="paper-weapon">
+        </label>
+        <label>
+          <input type="radio" class="radio-button hidden" id="scissors" name="weapon" value="">
+          <img class="weapon-img" src=assets/scissors-weapon.png alt="scissors-weapon">
+        </label>
+      </div>
+      <aside class="computer-player">
+        <section class="computer-player-info">
+          <img class="player-avatar" src=assets/computer-avatar.png alt="computer-avatar">
+          <h3>COMPUTER</h3>
+          <h4>Wins: 0</h4>
+        </section>
+      </aside>
+      <div class="elemental-game hidden">
+        <header>
+          <h1>Rock - Paper - Scissors</h1>
+          <h2>...choose your weapon...</h2>
+        </header>
+        <label>
+          <input type="radio" class="radio-button hidden" id="fire" name="weapon" value="">
+          <img class="weapon-img" src="" alt="fire-weapon">
+        </label>
+        <label>
+          <input type="radio" class="radio-button hidden" id="water" name="weapon" value="">
+          <img class="weapon-img" src="" alt="water-weapon">
+        </label>
+        <label>
+          <input type="radio" class="radio-button hidden" id="air" name="weapon" value="">
+          <img class="weapon-img" src="" alt="air-weapon">
+        </label>
+        <label>
+          <input type="radio" class="radio-button hidden" id="earth" name="weapon" value="">
+          <img class="weapon-img" src="" alt="earth-weapon">
+        </label>
+      </div>
+      </div>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>
