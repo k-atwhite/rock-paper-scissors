@@ -1,18 +1,22 @@
 // VARIABLES
+var player = new Player({})
 var currentGame = new Game()
-var player = new Player()
 
 var classicGameButton = document.querySelector('.classic-game-button')
 var elementalGameButton = document.querySelector('.elemental-game-button')
 var classicGame = document.querySelector('.classic-game')
 var gameChoice = document.querySelector('.game-choice')
 
-var infoText = document.querySelector('h2')
+var resultsText = document.querySelector('#resultsText')
 
 // weapons
 var rockImg = document.querySelector('#rock')
 var paperImg = document.querySelector('#paper')
 var scissorsImg = document.querySelector('#scissors')
+
+var results = document.querySelector("#results")
+var classicHumanWeapon = document.getElementById('classicHumanWeapon')
+var classicComputerWeapon = document.getElementById('classicComputerWeapon')
 
 // EVENT LISTENERS
 classicGameButton.addEventListener('click', function() {
@@ -26,6 +30,19 @@ paperImg.addEventListener('click', startGame)
 
 scissorsImg.addEventListener('click', startGame)
 
+gameChoice.addEventListener('click', function(event) {
+  displayChoices(event)
+})
+
+function displayChoices() {
+  var gameType = event.target.id
+  if (gameType === 'classic') {
+    toggleHidden(classicGame, gameChoice)
+  } else if (gameType === 'elemental') {
+    toggleHidden(classicGame, gameChoice)
+  }
+}
+
 // FUNCTIONS
 function toggleHidden(element1, element2) {
   element1.classList.toggle('hidden')
@@ -34,18 +51,38 @@ function toggleHidden(element1, element2) {
 
 function startGame(event) {
   currentGame.human.currentWeapon = event.target.id
-  computerChoice()
-  currentGame.evaluateGame()
+  displayComputerWeapon()
+  var result = currentGame.evaluateGame()
+  resultsText.innerText = `${result}`
 }
 
-function computerChoice() {
-  var randomNum =  Math.floor(Math.random() * 3);
-  if (randomNum === 1) {
-    computerWeapon = "rock"
-  } else if (randomNum === 2) {
-    computerWeapon = "paper"
-  } else if (randomNum === 3) {
-    computerWeapon = "scissors"
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function displayHumanWeapon() {
+  var humanWeapon = currentGame.human.currentWeapon
+  if (humanWeapon === "rock") {
+    document.getElementById("classicHumanWeapon").src = "assets/rock-weapon.png";
+  } else if (humanWeapon === "paper") {
+    document.getElementById("classicHumanWeapon").src = "assets/paper-weapon.png";
+  } else if (humanWeapon === "scissors") {
+    document.getElementById("classicHumanWeapon").src = "assets/scissors-weapon.png";
   }
-  currentGame.computer.currentWeapon = computerWeapon
+}
+
+function displayComputerWeapon() {
+  currentGame.computer.currentWeapon = currentGame.classicWeapons[getRandomIndex(currentGame.classicWeapons)]
+  var computerWeapon = currentGame.computer.currentWeapon
+  console.log(currentGame.human.currentWeapon);
+  console.log(currentGame.computer.currentWeapon);
+  toggleHidden(classicGame, results)
+  if (computerWeapon === "rock") {
+    document.getElementById("classicComputerWeapon").src = "assets/rock-weapon.png";
+  } else if (computerWeapon === "paper") {
+    document.getElementById("classicComputerWeapon").src = "assets/paper-weapon.png";
+  } else if (computerWeapon === "scissors") {
+    document.getElementById("classicComputerWeapon").src = "assets/scissors-weapon.png";
+  }
+  displayHumanWeapon()
 }
