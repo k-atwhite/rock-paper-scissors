@@ -8,8 +8,9 @@ var classicGame = document.querySelector('.classic-game')
 var gameChoice = document.querySelector('.game-choice')
 
 var resultsText = document.querySelector('#resultsText')
+var humanWins = document.getElementById('humanWins')
+var computerWins = document.getElementById('computerWins')
 
-// weapons
 var rockImg = document.querySelector('#rock')
 var paperImg = document.querySelector('#paper')
 var scissorsImg = document.querySelector('#scissors')
@@ -49,6 +50,11 @@ function toggleHidden(element1, element2) {
   element2.classList.toggle('hidden')
 }
 
+function testSwitchTurn() {
+  toggleHidden(results, classicGame)
+  // clearTimeout(currentGame.timeout)
+}
+
 function startGame(event) {
   currentGame.human.currentWeapon = event.target.id
   displayComputerWeapon()
@@ -85,4 +91,16 @@ function displayComputerWeapon() {
     document.getElementById("classicComputerWeapon").src = "assets/scissors-weapon.png";
   }
   displayHumanWeapon()
+  incrementWins()
+}
+
+function incrementWins() {
+  if (currentGame.humanWins()) {
+    currentGame.human.wins ++
+    humanWins.innerText = `Wins: ${currentGame.human.wins}`
+  } else if (currentGame.computerWins()) {
+    currentGame.computer.wins ++
+    computerWins.innerText = `Wins: ${currentGame.computer.wins}`
+  }
+  currentGame.switchTurn()
 }

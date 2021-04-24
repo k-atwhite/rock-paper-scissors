@@ -35,7 +35,7 @@ class Game {
   }
 
   switchTurn() {
-
+    var timeout = setTimeout(function() {testSwitchTurn()}, 3000)
   }
 
   resetGame() {
@@ -43,11 +43,13 @@ class Game {
   }
 }
 
-// A game.js file that contains a Game class.
+
+
+// A game.js file that contains a Game class. - CHECK
 // A Game should include:
-// A way to keep track of the selected game type
-// Two Player instances
+// A way to keep track of the selected game type - CHECK
+// Two Player instances - CHECK
 // A way to keep track of the data for the game board
-// A way to detect when a game is a draw (no one has won)
+// A way to detect when a game is a draw (no one has won) - CHECK
 // A way to reset the Game’s board to begin a new game
 // A way to check the Game’s board data for win conditions
