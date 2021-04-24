@@ -30,6 +30,10 @@ h1 {
   display: flex;
 }
 
+h3 {
+  margin-top: 20vh;
+}
+
 .human-player {
   align-items: center;
   display: flex;
@@ -53,6 +57,7 @@ h1 {
   align-items: center;
   height: 40vh;
   width: 20vw;
+  margin-top:
 }
 
 .computer-player {

@@ -11,7 +11,6 @@
     <main>
       <aside class="human-player">
         <section class="human-player-info">
-          <img class="player-avatar" src=assets/human-avatar.png alt="human-avatar">
           <h3>HUMAN</h3>
           <h4>Wins: 0</h4>
         </section>
@@ -29,20 +28,19 @@
         </header>
         <label>
           <input type="radio" class="radio-button hidden" id="rock" name="weapon" value="">
-          <img class="weapon-img" src=assets/rock-weapon.png alt="rock-weapon">
+          <img class="weapon-img" src=assets/rock-weapon.png alt="rock-weapon" id="rock">
         </label>
         <label>
           <input type="radio" class="radio-button hidden" id="paper" name="weapon" value="">
-          <img class="weapon-img" src=assets/paper-weapon.png alt="paper-weapon">
+          <img class="weapon-img" src=assets/paper-weapon.png alt="paper-weapon" id="paper">
         </label>
         <label>
           <input type="radio" class="radio-button hidden" id="scissors" name="weapon" value="">
-          <img class="weapon-img" src=assets/scissors-weapon.png alt="scissors-weapon">
+          <img class="weapon-img" src=assets/scissors-weapon.png alt="scissors-weapon" id="scissors">
         </label>
       </div>
       <aside class="computer-player">
         <section class="computer-player-info">
-          <img class="player-avatar" src=assets/computer-avatar.png alt="computer-avatar">
           <h3>COMPUTER</h3>
           <h4>Wins: 0</h4>
         </section>
@@ -70,7 +68,9 @@
         </label>
       </div>
       </div>
-      <script src="main.js"></script>
+      <script src="src/Game.js"></script>
+      <script src="src/Player.js"></script>
+      <script src="src/main.js"></script>
     </main>
   </body>
 </html>
