@@ -1,19 +1,37 @@
 class Game {
   constructor(gameType, players, stats) {
     this.gameType = gameType
-    this.player =  new Player('Human', '🤠', [])
+    this.human =  new Player('Human', '🤠', [])
     this.computer = new Player('Computer', '🖥', [])
     this.stats = stats
   }
 
-  declareResult() {
-
+  evaluateGame() {
+    if (this.human.currentWeapon === this.computer.currentWeapon) {
+      infoText.innerText = "It's a Draw!"
+    }if (this.human.currentWeapon === "rock") {
+      if (this.computer.currentWeapon === "paper") {
+        computerWins()
+      } else if (this.computer.currentWeapon === "scissors") {
+        humanWins()
+      }
+    else if (this.human.currentWeapon === "paper") {
+      if (this.computer.currentWeapon === "scissors") {
+        humanWins()
+        }
+      }
+    }
   }
+
+  // computerWins() {
+  //   infoText.innerText = "Computer Wins!"
+  // }
+  //
+  // humanWins() {
+  //   infoText.innerText = "Human Wins!"
+  // }
+
   switchTurn() {
-
-  }
-
-  declareDraw() {
 
   }
 

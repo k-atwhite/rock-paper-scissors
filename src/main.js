@@ -7,6 +7,8 @@ var elementalGameButton = document.querySelector('.elemental-game-button')
 var classicGame = document.querySelector('.classic-game')
 var gameChoice = document.querySelector('.game-choice')
 
+var infoText = document.querySelector('h2')
+
 // weapons
 var rockImg = document.querySelector('#rock')
 var paperImg = document.querySelector('#paper')
@@ -15,11 +17,14 @@ var scissorsImg = document.querySelector('#scissors')
 // EVENT LISTENERS
 classicGameButton.addEventListener('click', function() {
   toggleHidden(classicGame, gameChoice)
+  currentGame.gameType = "classic"
 })
 
-rockImg.addEventListener('click', logWeapon)
-paperImg.addEventListener('click', logWeapon)
-scissorsImg.addEventListener('click', logWeapon)
+rockImg.addEventListener('click', startGame)
+
+paperImg.addEventListener('click', startGame)
+
+scissorsImg.addEventListener('click', startGame)
 
 // FUNCTIONS
 function toggleHidden(element1, element2) {
@@ -27,10 +32,20 @@ function toggleHidden(element1, element2) {
   element2.classList.toggle('hidden')
 }
 
-function logWeapon(event) {
-  var chosenWeapon = event.target.id
-  return chosenWeapon
+function startGame(event) {
+  currentGame.human.currentWeapon = event.target.id
+  computerChoice()
+  currentGame.evaluateGame()
 }
 
-function determineWinner() {
+function computerChoice() {
+  var randomNum =  Math.floor(Math.random() * 3);
+  if (randomNum === 1) {
+    computerWeapon = "rock"
+  } else if (randomNum === 2) {
+    computerWeapon = "paper"
+  } else if (randomNum === 3) {
+    computerWeapon = "scissors"
+  }
+  currentGame.computer.currentWeapon = computerWeapon
 }
