@@ -4,11 +4,11 @@ html {
   font-family: 'PT Serif', serif;
 }
 
-/* * {
+/* {
   border: 1px solid blue;
-  margin: 0;
-  padding: 0;
-} */
+  /* margin: 0;
+  padding: 0; */
+
 
 header {
   text-align: center;
@@ -71,7 +71,8 @@ h3 {
 /* add elemental-game and classic-game */
 .game-choice,
 .classic-game,
-.elemental-game {
+.elemental-game,
+.results {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */

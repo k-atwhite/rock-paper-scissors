@@ -12,7 +12,7 @@
       <aside class="human-player">
         <section class="human-player-info">
           <h3>HUMAN</h3>
-          <h4>Wins: 0</h4>
+          <h4 id="humanWins">Wins: 0</h4>
         </section>
       </aside>
       <section class="game-choice">
@@ -21,7 +21,7 @@
           <button class="classic-game-button" type="button">Classic Game:<br>Rock beats Scissors<br>Scissors beats Paper<br>Paper beats Rock</button>
           <button class="elemental-game-button" type="button">Elemental Game:<br> Rock beats Fire<br>Fire beats Air<br>Air beats Water<br>Water beats Rock<br>All else = DRAW!</button>
       </section>
-      <div class="classic-game hidden">
+      <div class="classic-game hidden" id="classic">
         <header>
           <h1>Rock - Paper - Scissors</h1>
           <h2>...choose your weapon...</h2>
@@ -39,13 +39,21 @@
           <img class="weapon-img" src=assets/scissors-weapon.png alt="scissors-weapon" id="scissors">
         </label>
       </div>
+      <div class="results hidden" id="results">
+        <header>
+          <h1>Rock - Paper - Scissors</h1>
+          <h2 id="resultsText">Wins!</h2>
+        </header>
+        <img class="classic-human-weapon" id="classicHumanWeapon" src="">
+        <img class="classic-computer-weapon" id="classicComputerWeapon" src="">
+      </div>
       <aside class="computer-player">
         <section class="computer-player-info">
           <h3>COMPUTER</h3>
-          <h4>Wins: 0</h4>
+          <h4 id="computerWins">Wins: 0</h4>
         </section>
       </aside>
-      <div class="elemental-game hidden">
+      <div class="elemental-game hidden" id="elemental">
         <header>
           <h1>Rock - Paper - Scissors</h1>
           <h2>...choose your weapon...</h2>
