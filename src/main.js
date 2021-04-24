@@ -6,15 +6,12 @@ var classicGameButton = document.querySelector('.classic-game-button')
 var elementalGameButton = document.querySelector('.elemental-game-button')
 var classicGame = document.querySelector('.classic-game')
 var gameChoice = document.querySelector('.game-choice')
-
 var resultsText = document.querySelector('#resultsText')
 var humanWins = document.getElementById('humanWins')
 var computerWins = document.getElementById('computerWins')
-
 var rockImg = document.querySelector('#rock')
 var paperImg = document.querySelector('#paper')
 var scissorsImg = document.querySelector('#scissors')
-
 var results = document.querySelector("#results")
 var classicHumanWeapon = document.getElementById('classicHumanWeapon')
 var classicComputerWeapon = document.getElementById('classicComputerWeapon')
@@ -50,13 +47,9 @@ function toggleHidden(element1, element2) {
   element2.classList.toggle('hidden')
 }
 
-function testSwitchTurn() {
-  toggleHidden(results, classicGame)
-  // clearTimeout(currentGame.timeout)
-}
 
 function startGame(event) {
-  currentGame.human.currentWeapon = event.target.id
+  currentGame.human.currentWeapon = event.target.id // **** method in player
   displayComputerWeapon()
   var result = currentGame.evaluateGame()
   resultsText.innerText = `${result}`
@@ -80,8 +73,8 @@ function displayHumanWeapon() {
 function displayComputerWeapon() {
   currentGame.computer.currentWeapon = currentGame.classicWeapons[getRandomIndex(currentGame.classicWeapons)]
   var computerWeapon = currentGame.computer.currentWeapon
-  console.log(currentGame.human.currentWeapon);
-  console.log(currentGame.computer.currentWeapon);
+  // console.log(currentGame.human.currentWeapon);
+  // console.log(currentGame.computer.currentWeapon);
   toggleHidden(classicGame, results)
   if (computerWeapon === "rock") {
     document.getElementById("classicComputerWeapon").src = "assets/rock-weapon.png";
@@ -94,7 +87,7 @@ function displayComputerWeapon() {
   incrementWins()
 }
 
-function incrementWins() {
+function incrementWins() { // **** Add incremebt function to player
   if (currentGame.humanWins()) {
     currentGame.human.wins ++
     humanWins.innerText = `Wins: ${currentGame.human.wins}`

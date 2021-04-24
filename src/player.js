@@ -15,6 +15,9 @@ class Player {
   }
 
   takeTurn() {
-
+// **** Assign random index here? Assign the weapons?
   }
 }
+
+
+// Never update anything in game or player from anywhere BUT game or Player

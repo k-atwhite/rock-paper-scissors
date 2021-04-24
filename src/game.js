@@ -20,7 +20,7 @@ class Game {
     if (this.human.currentWeapon === this.computer.currentWeapon) {
       return "It's a Draw!"
     } else if (this.human.currentWeapon === "rock" && this.computer.currentWeapon === "paper") {
-      return this.computerWins()
+      result = this.computerWins()
     } else if (this.human.currentWeapon === "rock" && this.computer.currentWeapon === "scissors") {
       return this.humanWins()
     } else if (this.human.currentWeapon === "paper" && this.computer.currentWeapon === "scissors") {
@@ -32,10 +32,12 @@ class Game {
     } else if (this.human.currentWeapon === "scissors" && this.computer.currentWeapon === "paper") {
       return this.humanWins()
     }
+
+    incrementWins(result)
   }
 
   switchTurn() {
-    var timeout = setTimeout(function() {testSwitchTurn()}, 3000)
+    setTimeout(function() {toggleHidden(results, classicGame)}, 3000)
   }
 
   resetGame() {
