@@ -6,6 +6,15 @@ class Player {
     this.currentWeapon = player.currentWeapon
   }
 
+  setHumanWeapon(weapon) {
+    this.currentWeapon = weapon
+  }
+
+  setComputerWeapon(weaponsArray) {
+    var randomWeapon = Math.floor(Math.random() * weaponsArray.length)
+    this.currentWeapon = weaponsArray[randomWeapon]
+  }
+
   saveWinsToStorage() {
 
   }
