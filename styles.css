@@ -9,6 +9,9 @@ html {
   /* margin: 0;
   padding: 0; */
 
+  a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+  }
 
 header {
   text-align: center;
@@ -90,6 +93,15 @@ button {
   padding-top: 2%;
   padding-bottom: 2%;
   margin: 5%;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.change-game-button {
+  margin-top: 20vh;
 }
 
 .radio-buttons {

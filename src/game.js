@@ -50,6 +50,6 @@ class Game {
   }
 
   switchTurn() {
-    setTimeout(function() {toggleHidden(results, classicGame)}, 3000)
+    setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 3000)
   }
 }
