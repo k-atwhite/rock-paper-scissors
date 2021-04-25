@@ -18,10 +18,10 @@
       <section class="game-choice">
         <h1>Rock - Paper - Scissors</h1>
         <h2>...choose your game...</h2>
-          <button class="classic-game-button" type="button">Classic Game:<br>Rock beats Scissors<br>Scissors beats Paper<br>Paper beats Rock</button>
-          <button class="elemental-game-button" type="button">Elemental Game:<br> Rock beats Fire<br>Fire beats Air<br>Air beats Water<br>Water beats Rock<br>All else = DRAW!</button>
+          <button class="classic-game-button" type="button" id="classic">Classic Game:<br>Rock beats Scissors<br>Scissors beats Paper<br>Paper beats Rock</button>
+          <button class="elemental-game-button" type="button" id="elemental">Elemental Game:<br> Rock beats Fire<br>Fire beats Air<br>Air beats Water<br>Water beats Rock<br>All else = DRAW!</button>
       </section>
-      <div class="classic-game hidden" id="classic">
+      <div class="classic-game hidden" id="classicGame">
         <header>
           <h1>Rock - Paper - Scissors</h1>
           <h2>...choose your weapon...</h2>
@@ -47,13 +47,7 @@
         <img class="classic-human-weapon" id="classicHumanWeapon" src="">
         <img class="classic-computer-weapon" id="classicComputerWeapon" src="">
       </div>
-      <aside class="computer-player">
-        <section class="computer-player-info">
-          <h3>COMPUTER</h3>
-          <h4 id="computerWins">Wins: 0</h4>
-        </section>
-      </aside>
-      <div class="elemental-game hidden" id="elemental">
+      <div class="elemental-game hidden" id="elementalGame">
         <header>
           <h1>Rock - Paper - Scissors</h1>
           <h2>...choose your weapon...</h2>
@@ -75,7 +69,12 @@
           <img class="weapon-img" src="" alt="earth-weapon">
         </label>
       </div>
-      </div>
+      <aside class="computer-player">
+        <section class="computer-player-info">
+          <h3>COMPUTER</h3>
+          <h4 id="computerWins">Wins: 0</h4>
+        </section>
+      </aside>
       <script src="src/Game.js"></script>
       <script src="src/Player.js"></script>
       <script src="src/main.js"></script>
