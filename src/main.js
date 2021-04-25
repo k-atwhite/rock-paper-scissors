@@ -5,6 +5,7 @@ var currentGame = new Game()
 var classicGame = document.getElementById('classicGame')
 var elementalGame = document.getElementById('elementalGame')
 var gameChoice = document.querySelector('.game-choice')
+var changeGameButton = document.getElementById('changeGameButton')
 var resultsText = document.querySelector('#resultsText')
 var humanWins = document.getElementById('humanWins')
 var computerWins = document.getElementById('computerWins')
@@ -26,20 +27,31 @@ rockImg.addEventListener('click', runGame)
 paperImg.addEventListener('click', runGame)
 scissorsImg.addEventListener('click', runGame)
 
+changeGameButton.addEventListener('click', changeGame)
+
 
 // FUNCTIONS
-function toggleHidden(element1, element2) {
+function toggleHidden(element1, element2, element3) {
   element1.classList.toggle('hidden')
   element2.classList.toggle('hidden')
+  element3.classList.toggle('hidden')
 }
 
 function displayChoices(event) {
   var gameType = event.target.id
   currentGame.setGameType(gameType)
   if (gameType === 'classic') {
-    toggleHidden(classicGame, gameChoice)
+    toggleHidden(classicGame, gameChoice, changeGameButton)
   } else if (gameType === 'elemental') {
-    toggleHidden(elementalGame, gameChoice)
+    toggleHidden(elementalGame, gameChoice, changeGameButton)
+  }
+}
+
+function changeGame() {
+  if (currentGame.gameType = 'classic') {
+    toggleHidden(classicGame, gameChoice, changeGameButton)
+  } else {
+    toggleHidden(elementalGame, gameChoice, changeGameButton)
   }
 }
 
@@ -67,7 +79,7 @@ function displayHumanWeapon() {
 
 function displayComputerWeapon() {
   var computerWeapon = currentGame.computer.currentWeapon
-  toggleHidden(classicGame, results)
+  toggleHidden(classicGame, results, changeGameButton)
   if (computerWeapon === "rock") {
     document.getElementById("classicComputerWeapon").src = "assets/rock-weapon.png";
   } else if (computerWeapon === "paper") {
