@@ -11,7 +11,7 @@ class Game {
     this.gameType = gameType
     if (this.gameType === 'classic') {
       this.weapons = ['rock', 'paper' , 'scissors' ]
-    } else {
+    } else if (this.gameType ==='elemental') {
       this.weapons = ['fire', 'water', 'air', 'earth']
     }
   }
@@ -42,6 +42,45 @@ class Game {
       result = this.humanWins()
     }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "fire") {
       result = this.humanWins()
+    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "fire") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "fire") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "fire") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "water") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "water") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "water") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "ether") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "air") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "air") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "air") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "air") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "earth") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "earth") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "earth") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "earth") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "ether") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "ether") {
+      result = this.humanWins()
+    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "ether") {
+      result = this.computerWins()
+    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "ether") {
+      result = this.humanWins()
+    }
     if (result === "Human Wins!") {
       this.human.wins ++
     } else if (result === "Computer Wins!") {
@@ -51,6 +90,10 @@ class Game {
   }
 
   switchTurn() {
-    setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 3000)
+    if (currentGame.gameType === 'classic') {
+      setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 3000)
+    } else if (currentGame.gameType === 'elemental') {
+      setTimeout(function() {toggleHidden(results, elementalGame, changeGameButton)}, 3000)
+    }
   }
 }

@@ -18,9 +18,6 @@ var airImg = document.querySelector('#air')
 var earthImg = document.querySelector('#earth')
 var etherImg = document.querySelector('#ether')
 
-
-
-
 var results = document.querySelector("#results")
 var chosenHumanWeapon = document.getElementById('chosenHumanWeapon')
 var chosenComputerWeapon = document.getElementById('chosenComputerWeapon')
@@ -62,9 +59,9 @@ function displayChoices(event) {
 }
 
 function changeGame() {
-  if (currentGame.gameType = 'classic') {
+  if (currentGame.gameType === 'classic') {
     toggleHidden(classicGame, gameChoice, changeGameButton)
-  } else if (currentGame.gameType = 'elemental'){
+  } else if (currentGame.gameType === 'elemental'){
     toggleHidden(elementalGame, gameChoice, changeGameButton)
   }
 }
