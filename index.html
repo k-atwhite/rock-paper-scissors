@@ -20,7 +20,7 @@
         <h1>Rock - Paper - Scissors</h1>
         <h2>...choose your game...</h2>
           <button class="classic-game-button" type="button" id="classic">Classic Game:<br>Rock beats Scissors<br>Scissors beats Paper<br>Paper beats Rock</button>
-          <button class="elemental-game-button" type="button" id="elemental">Elemental Game:<br> Rock beats Fire<br>Fire beats Air<br>Air beats Water<br>Water beats Rock<br>All else = DRAW!</button>
+          <button class="elemental-game-button" type="button" id="elemental">Elemental Game:<br>Fire beats Air + Earth<br>Water beats Fire + Ether<br>Air beats Water + Earth<br>Earth beats Water + Ether<br>Ether beats Air + Fire</button>
       </section>
       <div class="classic-game hidden" id="classicGame">
         <header>
@@ -45,8 +45,8 @@
           <h1>Rock - Paper - Scissors</h1>
           <h2 id="resultsText">Wins!</h2>
         </header>
-        <img class="classic-human-weapon" id="classicHumanWeapon" src="">
-        <img class="classic-computer-weapon" id="classicComputerWeapon" src="">
+        <img class="chosen-human-weapon" id="chosenHumanWeapon" src="">
+        <img class="chosen-computer-weapon" id="chosenComputerWeapon" src="">
       </div>
       <div class="elemental-game hidden" id="elementalGame">
         <header>
@@ -54,20 +54,19 @@
           <h2>...choose your weapon...</h2>
         </header>
         <label>
-          <input type="radio" class="radio-button hidden" id="fire" name="weapon" value="">
-          <img class="weapon-img" src="" alt="fire-weapon">
+          <img class="elemental-weapon-img" src="assets/fire-weapon.png" alt="fire-weapon" id="fire">
         </label>
         <label>
-          <input type="radio" class="radio-button hidden" id="water" name="weapon" value="">
-          <img class="weapon-img" src="" alt="water-weapon">
+          <img class="elemental-weapon-img" src="assets/water-weapon.png" alt="water-weapon" id="water">
         </label>
         <label>
-          <input type="radio" class="radio-button hidden" id="air" name="weapon" value="">
-          <img class="weapon-img" src="" alt="air-weapon">
+          <img class="elemental-weapon-img" src="assets/air-weapon.png" alt="air-weapon" id="air">
         </label>
         <label>
-          <input type="radio" class="radio-button hidden" id="earth" name="weapon" value="">
-          <img class="weapon-img" src="" alt="earth-weapon">
+          <img class="elemental-weapon-img" src="assets/earth-weapon.png" alt="earth-weapon" id="earth">
+        </label>
+        <label>
+          <img class="elemental-weapon-img" src="assets/ether-weapon.png" alt="ether-weapon" id="ether">
         </label>
       </div>
       <aside class="computer-player">

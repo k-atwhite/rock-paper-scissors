@@ -40,7 +40,8 @@ class Game {
       result = this.computerWins()
     } else if (this.human.currentWeapon === "scissors" && this.computer.currentWeapon === "paper") {
       result = this.humanWins()
-    }
+    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "fire") {
+      result = this.humanWins()
     if (result === "Human Wins!") {
       this.human.wins ++
     } else if (result === "Computer Wins!") {
