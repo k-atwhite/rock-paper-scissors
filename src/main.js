@@ -12,9 +12,15 @@ var computerWins = document.getElementById('computerWins')
 var rockImg = document.querySelector('#rock')
 var paperImg = document.querySelector('#paper')
 var scissorsImg = document.querySelector('#scissors')
+var fireImg = document.querySelector('#fire')
+var waterImg = document.querySelector('#water')
+var airImg = document.querySelector('#air')
+var earthImg = document.querySelector('#earth')
+var etherImg = document.querySelector('#ether')
+
 var results = document.querySelector("#results")
-var classicHumanWeapon = document.getElementById('classicHumanWeapon')
-var classicComputerWeapon = document.getElementById('classicComputerWeapon')
+var chosenHumanWeapon = document.getElementById('chosenHumanWeapon')
+var chosenComputerWeapon = document.getElementById('chosenComputerWeapon')
 
 
 // EVENT LISTENERS
@@ -22,13 +28,18 @@ gameChoice.addEventListener('click', function(event) {
   displayChoices(event)
 })
 
+changeGameButton.addEventListener('click', changeGame)
+
 // **** IMRPOVE EVENT BUBBLING
 rockImg.addEventListener('click', runGame)
 paperImg.addEventListener('click', runGame)
 scissorsImg.addEventListener('click', runGame)
 
-changeGameButton.addEventListener('click', changeGame)
-
+fireImg.addEventListener('click', runGame)
+waterImg.addEventListener('click', runGame)
+airImg.addEventListener('click', runGame)
+earthImg.addEventListener('click', runGame)
+etherImg.addEventListener('click', runGame)
 
 // FUNCTIONS
 function toggleHidden(element1, element2, element3) {
@@ -48,16 +59,18 @@ function displayChoices(event) {
 }
 
 function changeGame() {
-  if (currentGame.gameType = 'classic') {
+  if (currentGame.gameType === 'classic') {
     toggleHidden(classicGame, gameChoice, changeGameButton)
-  } else {
+  } else if (currentGame.gameType === 'elemental'){
     toggleHidden(elementalGame, gameChoice, changeGameButton)
   }
 }
 
 function runGame(event) {
   currentGame.human.setHumanWeapon(event.target.id)
+  console.log(currentGame.human.currentWeapon)
   currentGame.computer.setComputerWeapon(currentGame.weapons)
+  console.log(currentGame.computer.currentWeapon)
   displayHumanWeapon()
   displayComputerWeapon()
   var result = currentGame.evaluateGame()
@@ -69,23 +82,47 @@ function runGame(event) {
 function displayHumanWeapon() {
   var humanWeapon = currentGame.human.currentWeapon
   if (humanWeapon === "rock") {
-    document.getElementById("classicHumanWeapon").src = "assets/rock-weapon.png";
+    document.getElementById("chosenHumanWeapon").src = "assets/rock-weapon.png";
   } else if (humanWeapon === "paper") {
-    document.getElementById("classicHumanWeapon").src = "assets/paper-weapon.png";
+    document.getElementById("chosenHumanWeapon").src = "assets/paper-weapon.png";
   } else if (humanWeapon === "scissors") {
-    document.getElementById("classicHumanWeapon").src = "assets/scissors-weapon.png";
+    document.getElementById("chosenHumanWeapon").src = "assets/scissors-weapon.png";
+  } else if (humanWeapon === "fire") {
+    document.getElementById("chosenHumanWeapon").src = "assets/fire-weapon.png";
+  }else if (humanWeapon === "water") {
+    document.getElementById("chosenHumanWeapon").src = "assets/water-weapon.png";
+  }else if (humanWeapon === "air") {
+    document.getElementById("chosenHumanWeapon").src = "assets/air-weapon.png";
+  }else if (humanWeapon === "earth") {
+    document.getElementById("chosenHumanWeapon").src = "assets/earth-weapon.png";
+  }else if (humanWeapon === "ether") {
+    document.getElementById("chosenHumanWeapon").src = "assets/ether-weapon.png";
   }
 }
 
 function displayComputerWeapon() {
   var computerWeapon = currentGame.computer.currentWeapon
-  toggleHidden(classicGame, results, changeGameButton)
+  if (currentGame.gameType === 'classic') {
+    toggleHidden(classicGame, results, changeGameButton)
+  } else if (currentGame.gameType === 'elemental') {
+    toggleHidden(elementalGame, results, changeGameButton)
+  }
   if (computerWeapon === "rock") {
-    document.getElementById("classicComputerWeapon").src = "assets/rock-weapon.png";
+    document.getElementById("chosenComputerWeapon").src = "assets/rock-weapon.png";
   } else if (computerWeapon === "paper") {
-    document.getElementById("classicComputerWeapon").src = "assets/paper-weapon.png";
+    document.getElementById("chosenComputerWeapon").src = "assets/paper-weapon.png";
   } else if (computerWeapon === "scissors") {
-    document.getElementById("classicComputerWeapon").src = "assets/scissors-weapon.png";
+    document.getElementById("chosenComputerWeapon").src = "assets/scissors-weapon.png";
+  }else if (computerWeapon === "fire") {
+    document.getElementById("chosenComputerWeapon").src = "assets/fire-weapon.png";
+  }else if (computerWeapon === "water") {
+    document.getElementById("chosenComputerWeapon").src = "assets/water-weapon.png";
+  }else if (computerWeapon === "air") {
+    document.getElementById("chosenComputerWeapon").src = "assets/air-weapon.png";
+  }else if (computerWeapon === "earth") {
+    document.getElementById("chosenComputerWeapon").src = "assets/earth-weapon.png";
+  }else if (computerWeapon === "ether") {
+    document.getElementById("chosenComputerWeapon").src = "assets/ether-weapon.png";
   }
 }
 
