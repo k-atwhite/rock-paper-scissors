@@ -3,7 +3,6 @@ class Game {
     this.gameType = gameType
     this.human =  new Player({name:'Human', token: '🤠'})
     this.computer = new Player({name: 'Computer', token: '🖥'})
-    this.stats = {human: 0, computer: 0}
     this.weapons = []
   }
 
@@ -86,6 +85,8 @@ class Game {
     } else if (result === "Computer Wins!") {
       this.computer.wins ++
     }
+    console.log(this.human.wins)
+    console.log(this.computer.wins)
     return result
   }
 

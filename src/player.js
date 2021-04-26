@@ -16,17 +16,12 @@ class Player {
   }
 
   saveWinsToStorage() {
-
+    var player = this.name
+    var wins = this.wins
+    localStorage.setItem(player, wins)
+    console.log(localStorage.getItem(player, wins));
   }
 
   retrieveWinsFromStorage() {
-
-  }
-
-  takeTurn() {
-// **** Assign random index here? Assign the weapons?
   }
 }
-
-
-// Never update anything in game or player from anywhere BUT game or Player

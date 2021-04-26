@@ -1,5 +1,4 @@
 // VARIABLES
-var player = new Player({})
 var currentGame = new Game()
 
 var classicGame = document.getElementById('classicGame')
@@ -17,7 +16,6 @@ var waterImg = document.querySelector('#water')
 var airImg = document.querySelector('#air')
 var earthImg = document.querySelector('#earth')
 var etherImg = document.querySelector('#ether')
-
 var results = document.querySelector("#results")
 var chosenHumanWeapon = document.getElementById('chosenHumanWeapon')
 var chosenComputerWeapon = document.getElementById('chosenComputerWeapon')
@@ -68,9 +66,7 @@ function changeGame() {
 
 function runGame(event) {
   currentGame.human.setHumanWeapon(event.target.id)
-  console.log(currentGame.human.currentWeapon)
   currentGame.computer.setComputerWeapon(currentGame.weapons)
-  console.log(currentGame.computer.currentWeapon)
   displayHumanWeapon()
   displayComputerWeapon()
   var result = currentGame.evaluateGame()
@@ -129,4 +125,6 @@ function displayComputerWeapon() {
 function updateScoreDisplay() {
   humanWins.innerText = `Wins: ${currentGame.human.wins}`
   computerWins.innerText = `Wins: ${currentGame.computer.wins}`
+  currentGame.human.saveWinsToStorage()
+  currentGame.computer.saveWinsToStorage()
 }
