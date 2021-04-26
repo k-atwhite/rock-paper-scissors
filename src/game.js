@@ -3,7 +3,6 @@ class Game {
     this.gameType = gameType
     this.human =  new Player({name:'Human', token: '🤠'})
     this.computer = new Player({name: 'Computer', token: '🖥'})
-    this.stats = {human: 0, computer: 0}
     this.weapons = []
   }
 
@@ -91,9 +90,9 @@ class Game {
 
   switchTurn() {
     if (currentGame.gameType === 'classic') {
-      setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 3000)
+      setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 2000)
     } else if (currentGame.gameType === 'elemental') {
-      setTimeout(function() {toggleHidden(results, elementalGame, changeGameButton)}, 3000)
+      setTimeout(function() {toggleHidden(results, elementalGame, changeGameButton)}, 2000)
     }
   }
 }
