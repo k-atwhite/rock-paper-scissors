@@ -26,6 +26,8 @@ gameChoice.addEventListener('click', function(event) {
   displayChoices(event)
 })
 
+window.addEventListener('load', displayStorage)
+
 changeGameButton.addEventListener('click', changeGame)
 
 // **** IMRPOVE EVENT BUBBLING
@@ -40,6 +42,12 @@ earthImg.addEventListener('click', runGame)
 etherImg.addEventListener('click', runGame)
 
 // FUNCTIONS
+function displayStorage() {
+  currentGame.human.retrieveWinsFromStorage(),
+  currentGame.computer.retrieveWinsFromStorage(),
+  updateScoreDisplay()
+}
+
 function toggleHidden(element1, element2, element3) {
   element1.classList.toggle('hidden')
   element2.classList.toggle('hidden')
@@ -127,4 +135,6 @@ function updateScoreDisplay() {
   computerWins.innerText = `Wins: ${currentGame.computer.wins}`
   currentGame.human.saveWinsToStorage()
   currentGame.computer.saveWinsToStorage()
+  currentGame.human.retrieveWinsFromStorage()
+  currentGame.computer.retrieveWinsFromStorage()
 }

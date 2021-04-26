@@ -19,9 +19,11 @@ class Player {
     var player = this.name
     var wins = this.wins
     localStorage.setItem(player, wins)
-    console.log(localStorage.getItem(player, wins));
   }
 
   retrieveWinsFromStorage() {
+    var player = this.name
+    this.wins = localStorage.getItem(player)
+
   }
 }

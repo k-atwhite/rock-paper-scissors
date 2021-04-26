@@ -85,16 +85,14 @@ class Game {
     } else if (result === "Computer Wins!") {
       this.computer.wins ++
     }
-    console.log(this.human.wins)
-    console.log(this.computer.wins)
     return result
   }
 
   switchTurn() {
     if (currentGame.gameType === 'classic') {
-      setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 3000)
+      setTimeout(function() {toggleHidden(results, classicGame, changeGameButton)}, 2000)
     } else if (currentGame.gameType === 'elemental') {
-      setTimeout(function() {toggleHidden(results, elementalGame, changeGameButton)}, 3000)
+      setTimeout(function() {toggleHidden(results, elementalGame, changeGameButton)}, 2000)
     }
   }
 }
