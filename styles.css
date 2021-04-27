@@ -4,14 +4,9 @@ html {
   font-family: 'PT Serif', serif;
 }
 
-/* {
-  border: 1px solid blue;
-  /* margin: 0;
-  padding: 0; */
-
-  a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+  /* a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
     cursor: pointer;
-  }
+  } */
 
 header {
   text-align: center;
@@ -37,6 +32,13 @@ h3 {
   margin-top: 20vh;
 }
 
+button,
+.classic-weapon-img,
+.elemental-weapon-img {
+  cursor: pointer;
+}
+
+
 .human-player {
   align-items: center;
   display: flex;
@@ -45,8 +47,9 @@ h3 {
   width: 20vw;
 }
 
-.player-avatar {
-  margin-bottom: 5%;
+.emoji {
+  font-size: 50px;
+  margin: 0;
 }
 
 .human-player-info,
@@ -60,7 +63,6 @@ h3 {
   align-items: center;
   height: 40vh;
   width: 20vw;
-  margin-top:
 }
 
 .computer-player {
@@ -78,7 +80,6 @@ h3 {
 .results {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 60vw;
 }
@@ -109,7 +110,7 @@ button:hover {
   justify-content: center;
 }
 
-.weapon-img {
+.classic-weapon-img {
   height: 25vh;
   width: 20vw;
 }
@@ -118,14 +119,6 @@ button:hover {
   height: 15vh;
   width: 15vh;
 }
-
-/* HIDE RADIO BUTTON - BUT JUST FOR WEAPONS */
-/* .radio-button {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-} */
 
 .hidden {
   display: none;

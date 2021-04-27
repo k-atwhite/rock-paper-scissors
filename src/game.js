@@ -16,11 +16,11 @@ class Game {
   }
 
   computerWins() {
-    return "Computer Wins!"
+    return "🖥 Computer Wins! 🖥"
   }
 
   humanWins() {
-    return "Human Wins!"
+    return "🤠 Human Wins!🤠"
   }
 
   evaluateGame() {
