@@ -4,24 +4,38 @@ html {
   font-family: 'PT Serif', serif;
 }
 
-  /* a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
-    cursor: pointer;
-  } */
-
 header {
   text-align: center;
 }
 
 main {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
+  height: 100vh;
   margin: 0;
+  width: 100vw;
 }
 
 body {
   margin: 0;
+}
+
+button {
+  border-radius: 15px;
+  background-color: #F4EDDC;
+  font-family: 'PT Serif', serif;
+  font-size: 150%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 5%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
 }
 
 h1 {
@@ -31,13 +45,6 @@ h1 {
 h3 {
   margin-top: 20vh;
 }
-
-button,
-.classic-weapon-img,
-.elemental-weapon-img {
-  cursor: pointer;
-}
-
 
 .human-player {
   align-items: center;
@@ -54,13 +61,13 @@ button,
 
 .human-player-info,
 .computer-player-info {
+  align-items: center;
   background-image: url(/Users/kwhite/turing/mod1/projects/rock-paper-scissors/assets/wood-sign.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 40vh;
   width: 20vw;
 }
@@ -73,32 +80,14 @@ button,
   width: 20vw;
 }
 
-/* add elemental-game and classic-game */
 .game-choice,
 .classic-game,
 .elemental-game,
 .results {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 60vw;
-}
-
-button {
-  border-radius: 15px;
-  background-color: #F4EDDC;
-  font-family: 'PT Serif', serif;
-  font-size: 150%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin: 5%;
-  transition: all 0.3s;
-}
-
-button:hover {
-  background-color: white;
 }
 
 .change-game-button {
@@ -111,11 +100,13 @@ button:hover {
 }
 
 .classic-weapon-img {
+  cursor: pointer;
   height: 25vh;
   width: 20vw;
 }
 
 .elemental-weapon-img {
+  cursor: pointer;
   height: 15vh;
   width: 15vh;
 }

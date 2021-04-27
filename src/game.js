@@ -27,58 +27,35 @@ class Game {
     var result
     if (this.human.currentWeapon === this.computer.currentWeapon) {
       result = "It's a Draw!"
-    } else if (this.human.currentWeapon === "rock" && this.computer.currentWeapon === "paper") {
-      result = this.computerWins()
+
     } else if (this.human.currentWeapon === "rock" && this.computer.currentWeapon === "scissors") {
       result = this.humanWins()
-    } else if (this.human.currentWeapon === "paper" && this.computer.currentWeapon === "scissors") {
-      result = this.computerWins()
     } else if (this.human.currentWeapon === "paper" && this.computer.currentWeapon === "rock") {
       result = this.humanWins()
-    } else if (this.human.currentWeapon === "scissors" && this.computer.currentWeapon === "rock") {
-      result = this.computerWins()
     } else if (this.human.currentWeapon === "scissors" && this.computer.currentWeapon === "paper") {
       result = this.humanWins()
     }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "fire") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "fire") {
-      result = this.computerWins()
-    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "fire") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "fire") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "water") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "water") {
       result = this.humanWins()
     }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "water") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "ether") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "air") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "air") {
-      result = this.computerWins()
-    }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "air") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "air") {
       result = this.humanWins()
     }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "earth") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "earth") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "earth") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "ether" && this.computer.currentWeapon === "earth") {
-      result = this.computerWins()
-    }else if (this.human.currentWeapon === "fire" && this.computer.currentWeapon === "ether") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "water" && this.computer.currentWeapon === "ether") {
       result = this.humanWins()
-    }else if (this.human.currentWeapon === "air" && this.computer.currentWeapon === "ether") {
-      result = this.computerWins()
     }else if (this.human.currentWeapon === "earth" && this.computer.currentWeapon === "ether") {
       result = this.humanWins()
+    }else {
+      result = this.computerWins()
     }
     if (result === "Human Wins!") {
       this.human.wins ++

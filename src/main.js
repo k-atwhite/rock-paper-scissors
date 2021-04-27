@@ -2,7 +2,7 @@
 var currentGame = new Game()
 var classicGame = document.getElementById('classicGame')
 var elementalGame = document.getElementById('elementalGame')
-var gameChoice = document.querySelector('.game-choice')
+var gameChoice = document.getElementById('gameChoice')
 var changeGameButton = document.getElementById('changeGameButton')
 var resultsText = document.querySelector('#resultsText')
 var humanWins = document.getElementById('humanWins')

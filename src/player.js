@@ -24,6 +24,5 @@ class Player {
   retrieveWinsFromStorage() {
     var player = this.name
     this.wins = localStorage.getItem(player)
-
   }
 }
