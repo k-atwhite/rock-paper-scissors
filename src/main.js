@@ -1,45 +1,23 @@
 // VARIABLES
 var currentGame = new Game()
-
 var classicGame = document.getElementById('classicGame')
 var elementalGame = document.getElementById('elementalGame')
-var gameChoice = document.querySelector('.game-choice')
+var gameChoice = document.getElementById('gameChoice')
 var changeGameButton = document.getElementById('changeGameButton')
 var resultsText = document.querySelector('#resultsText')
 var humanWins = document.getElementById('humanWins')
 var computerWins = document.getElementById('computerWins')
-var rockImg = document.querySelector('#rock')
-var paperImg = document.querySelector('#paper')
-var scissorsImg = document.querySelector('#scissors')
-var fireImg = document.querySelector('#fire')
-var waterImg = document.querySelector('#water')
-var airImg = document.querySelector('#air')
-var earthImg = document.querySelector('#earth')
-var etherImg = document.querySelector('#ether')
-var results = document.querySelector("#results")
 var chosenHumanWeapon = document.getElementById('chosenHumanWeapon')
 var chosenComputerWeapon = document.getElementById('chosenComputerWeapon')
 
-
 // EVENT LISTENERS
+window.addEventListener('load', displayStorage)
 gameChoice.addEventListener('click', function(event) {
   displayChoices(event)
 })
-
-window.addEventListener('load', displayStorage)
-
+classicGame.addEventListener('click', runGame)
+elementalGame.addEventListener('click', runGame)
 changeGameButton.addEventListener('click', changeGame)
-
-// **** IMRPOVE EVENT BUBBLING
-rockImg.addEventListener('click', runGame)
-paperImg.addEventListener('click', runGame)
-scissorsImg.addEventListener('click', runGame)
-
-fireImg.addEventListener('click', runGame)
-waterImg.addEventListener('click', runGame)
-airImg.addEventListener('click', runGame)
-earthImg.addEventListener('click', runGame)
-etherImg.addEventListener('click', runGame)
 
 // FUNCTIONS
 function displayStorage() {
@@ -73,7 +51,7 @@ function changeGame() {
 }
 
 function runGame(event) {
-  currentGame.human.setHumanWeapon(event.target.id)
+  currentGame.human.setHumanWeapon(event.target.closest('img').id)
   currentGame.computer.setComputerWeapon(currentGame.weapons)
   displayHumanWeapon()
   displayComputerWeapon()

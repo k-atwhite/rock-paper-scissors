@@ -4,29 +4,38 @@ html {
   font-family: 'PT Serif', serif;
 }
 
-/* {
-  border: 1px solid blue;
-  /* margin: 0;
-  padding: 0; */
-
-  a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
-    cursor: pointer;
-  }
-
 header {
   text-align: center;
 }
 
 main {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
+  height: 100vh;
   margin: 0;
+  width: 100vw;
 }
 
 body {
   margin: 0;
+}
+
+button {
+  border-radius: 15px;
+  background-color: #F4EDDC;
+  font-family: 'PT Serif', serif;
+  font-size: 150%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 5%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
 }
 
 h1 {
@@ -45,22 +54,22 @@ h3 {
   width: 20vw;
 }
 
-.player-avatar {
-  margin-bottom: 5%;
+.emoji {
+  font-size: 50px;
+  margin: 0;
 }
 
 .human-player-info,
 .computer-player-info {
+  align-items: center;
   background-image: url(/Users/kwhite/turing/mod1/projects/rock-paper-scissors/assets/wood-sign.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 40vh;
   width: 20vw;
-  margin-top:
 }
 
 .computer-player {
@@ -71,33 +80,14 @@ h3 {
   width: 20vw;
 }
 
-/* add elemental-game and classic-game */
 .game-choice,
 .classic-game,
 .elemental-game,
 .results {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
   width: 60vw;
-}
-
-button {
-  border-radius: 15px;
-  background-color: #F4EDDC;
-  font-family: 'PT Serif', serif;
-  font-size: 150%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin: 5%;
-  transition: all 0.3s;
-}
-
-button:hover {
-  background-color: white;
 }
 
 .change-game-button {
@@ -109,23 +99,17 @@ button:hover {
   justify-content: center;
 }
 
-.weapon-img {
+.classic-weapon-img {
+  cursor: pointer;
   height: 25vh;
   width: 20vw;
 }
 
 .elemental-weapon-img {
+  cursor: pointer;
   height: 15vh;
   width: 15vh;
 }
-
-/* HIDE RADIO BUTTON - BUT JUST FOR WEAPONS */
-/* .radio-button {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-} */
 
 .hidden {
   display: none;
