@@ -16,10 +16,12 @@ class Game {
   }
 
   computerWins() {
+    this.computer.wins ++
     return "🖥 Computer Wins! 🖥"
   }
 
   humanWins() {
+    this.human.wins ++
     return "🤠 Human Wins!🤠"
   }
 
@@ -27,7 +29,6 @@ class Game {
     var result
     if (this.human.currentWeapon === this.computer.currentWeapon) {
       result = "It's a Draw!"
-
     } else if (this.human.currentWeapon === "rock" && this.computer.currentWeapon === "scissors") {
       result = this.humanWins()
     } else if (this.human.currentWeapon === "paper" && this.computer.currentWeapon === "rock") {
@@ -56,11 +57,6 @@ class Game {
       result = this.humanWins()
     }else {
       result = this.computerWins()
-    }
-    if (result === "Human Wins!") {
-      this.human.wins ++
-    } else if (result === "Computer Wins!") {
-      this.computer.wins ++
     }
     return result
   }
