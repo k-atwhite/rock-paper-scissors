@@ -22,6 +22,9 @@ Project Goals:
 
 
 ## How to use the app
+https://user-images.githubusercontent.com/49215782/116325745-1ed72200-a780-11eb-91df-78d5c1085280.mp4
+
+
 ### [View in your browser!](https://k-atwhite.github.io/rock-paper-scissors/)
 
 
@@ -34,7 +37,7 @@ Project Goals:
 ## Future Additions
 There are so many ways to grow this site. Several examples could be:
 
-Option1: A simple addition would be a countdown timer displaying the only correct way to count down in rock, paper scissors which is "ROCK!, PAPER!, SCISSORS!, SHOOT!". And on "SHOOT", both sides display their weapon. 
+Option 1: A simple addition would be a countdown timer displaying the only correct way to count down in rock, paper scissors which is "ROCK!, PAPER!, SCISSORS!, SHOOT!". And on "SHOOT", both sides display their weapon. 
 
 Option 2: Animated images would enliven the page. Perhaps they could wiggle in anticipation whn you hover over them. Perhaps They could bump into each other after the battle countdown.
 
