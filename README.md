@@ -1,6 +1,9 @@
 # ROCK PAPER SCISSORS!
 
 ## Project Overview
+Rock Paper Scissors is the final solo project for Mod 1's Front End Development course. One major learning goal was project management. With just a rough video for a comp, I wrote the code for the HTML, CSS, and JavaScript functionality. My personal goal was to use this project as an opporunity to focus on and understand a clearly deliniated Data Model and DOM. I kept everything realted to my Data Model in my Player.js class file, and Game.js class file. Everything related to the DOM is kept in the main.js. file. I made an effort to clean up my code with clear event bubbling and straightforward functions. This project was also an opportunity to play with CSS, get creative, and see what I can create with my imagination and google!
+
+
 Project Goals:
 * Understand the difference between the data model and how the data is displayed on the DOM
 * Iterate through/filter DOM elements using for loops
