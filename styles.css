@@ -62,7 +62,7 @@ h3 {
 .human-player-info,
 .computer-player-info {
   align-items: center;
-  background-image: url(/Users/kwhite/turing/mod1/projects/rock-paper-scissors/assets/wood-sign.png);
+  background-image: url(assets/wood-sign.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
